@@ -1,0 +1,22 @@
+.hangmanpic {
+    border:2px solid blue;
+    border-right:none;
+    height:400px;
+    padding:70px 56px;
+}
+.hangmantext {
+    border:2px solid blue;
+    border-left:none;
+    height:400px;
+    padding:50px 20px;
+}
+#blankspace {
+    color:green;
+    font-size:30px;
+    height:84px;
+}
+#gameover {
+    color:green; 
+    font-size:30px; 
+    height:84px;
+}
