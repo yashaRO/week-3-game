@@ -53,7 +53,7 @@ document.addEventListener('keyup',function (e){
         hangman.blank()
     }
     else {
-        if(!/[A-za-z]/.test(String.fromCharCode(event.keyCode)) || event.keyCode >= 96 && event.keyCode <= 111) {
+        if(!/[A-Za-z]/.test(String.fromCharCode(event.keyCode)) || event.keyCode >= 96 && event.keyCode <= 111) {
             return
         }
         hangman.entry(String.fromCharCode(event.keyCode))
