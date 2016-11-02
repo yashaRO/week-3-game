@@ -31,7 +31,7 @@ var hangman = {
             this.guesses--;
             this.guessBank.push(letter);
             document.getElementById('guesses').innerHTML = hangman.guessBank.join(' ')
-            document.getElementById('hangman').src = 'assets/images/guess' + (this.guesses + 1) + '.png';
+            document.getElementById('hangman').src = 'assets/images/guess' + (this.guesses + 1) + '.PNG';
         }
     },
     win: function() {
