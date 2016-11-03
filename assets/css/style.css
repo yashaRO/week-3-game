@@ -1,11 +1,17 @@
+body {
+    background-attachment: fixed;
+    font-family:'Electrolize', sans-serif;
+}
 .hangmanpic {
-    border:2px solid blue;
+    background-color:black;
+    border:1px solid blue;
     border-right:none;
     height:400px;
     padding:70px 56px;
 }
 .hangmantext {
-    border:2px solid blue;
+    background-color:black;
+    border:1px solid blue;
     border-left:none;
     height:400px;
     padding:50px 20px;

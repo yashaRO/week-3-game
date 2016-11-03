@@ -3,24 +3,28 @@ var hangman = {
     guesses: 6,
     guessImg: 1,
     guessBank: [],
-    words: ['KEVIN', 'LISA', 'ROGER', 'BASIC', 'DAVID', 'MOVIE', 'SUPERNATURAL', 'TECHNOLOGY', 'OCCIPITAL', 'INUYASHA', 'SYMPHONY', 'DISHONORED'],
+    words: ['ELECTRIC','BASS','TECHNO','LIGHTNING','MICROCHIP','DUBSTEP','PROGRAMMING','JAVASCRIPT','TRANCE','CLUB','RAVE','HACKING','MUSIC','HOUSE','SEVEN|LIONS','ADVENTURE|CLUB','HARD|DRIVE','MONITOR','MOTHERBOARD','DESKTOP','LAPTOP','DEVELOPER','ABOVE|AND|BEYOND','KASKADE','TRITONAL','SKRILLEX','TIESTO','COMPUTER'],
     currWord: '',
     wordBlank: [],
     blank: function() {
         this.currWord = this.words[Math.floor(Math.random() * this.words.length)]
         this.wordBlank = [];
-        for (i = 0; i < this.currWord.length; i++) {this.wordBlank.push('_')}
+        for (i = 0; i < this.currWord.length; i++) {
+            if (this.currWord[i] == '|') {this.wordBlank.push('|')}
+            else {this.wordBlank.push('_')}
+        }
         this.gameStart = true;
         document.getElementById('blankspace').innerHTML = this.wordBlank.join(' ');
-        document.getElementById('gameover').innerHTML = ''
-        document.getElementById('hangman').src = 'assets/images/guess7.png'
+        document.getElementById('gameover').innerHTML = '';
+        document.getElementById('hangman').src = 'assets/images/guess7.PNG';
+        document.getElementById('guesses').innerHTML = this.guessBank.join('')
     },
     entry: function(letter) {
         if (this.currWord.indexOf(letter) > -1) {
             for (i = 0; i < this.currWord.length; i++) {
                 if (this.currWord[i] == letter) {
                     this.wordBlank[i] = letter
-                };
+                }
             }
             document.getElementById('blankspace').innerHTML = this.wordBlank.join(' ');
         }
