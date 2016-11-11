@@ -13,6 +13,28 @@ var hangman = {
             if (this.currWord[i] == '|') {this.wordBlank.push('|')}
             else {this.wordBlank.push('_')}
         }
+		switch(this.currWord) {
+			case 'SEVEN|LIONS':
+				document.getElementById('sound').src = 'assets/music/Fractals.m4a'
+				break;
+			case 'ABOVE|AND|BEYOND':
+				document.getElementById('sound').src = 'assets/music/Alone%20Tonight.mp3'
+				break;
+			case 'KASKADE':
+				document.getElementById('sound').src = 'assets/music/Raining%20(Dance.Love%20Edit).mp3'
+				break;
+			case 'TRITONAL':
+				document.getElementById('sound').src = 'assets/music/Sometimes%20I%20Wish.m4a'
+				break;
+			case 'TIESTO':
+				document.getElementById('sound').src = 'assets/music/Empty%20Streets.mp3'
+				break;
+			case 'TRANCE':
+				document.getElementById('sound').src = 'assets/music/Waiting%20Here%20For%20You.mp3'
+				break;
+			default:
+				break;
+		}
         this.gameStart = true;
         document.getElementById('blankspace').innerHTML = this.wordBlank.join(' ');
         document.getElementById('gameover').innerHTML = '';
